@@ -1,65 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Ahmedabad Car Rental</title>
+
 <style>
-body{
-    margin:0;
-    font-family:Arial;
-    background:#f5f5f5;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+
+body{background:#f4f6f9;color:#222;}
+
 header{
-    background:#0d1b2a;
-    color:white;
-    padding:20px;
-    text-align:center;
+    background:#0b1d33;
+    color:#fff;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
+header h2{font-size:24px;}
+header a{
+    color:white;
+    text-decoration:none;
+    background:#25D366;
+    padding:10px 18px;
+    border-radius:6px;
+}
+
 .hero{
-    background:url('https://images.unsplash.com/photo-1549924231-f129b911e442') center/cover;
-    height:350px;
+    background:url('https://images.unsplash.com/photo-1493238792000-8113da705763') center/cover;
+    height:420px;
     display:flex;
     align-items:center;
     justify-content:center;
+    text-align:center;
     color:white;
-    font-size:32px;
+}
+.hero h1{
+    font-size:48px;
+    background:rgba(0,0,0,0.5);
+    padding:20px 30px;
+    border-radius:10px;
+}
+
+.section-title{
+    text-align:center;
+    padding:40px 0 20px;
+    font-size:30px;
     font-weight:bold;
 }
-.container{
-    padding:30px;
+
+.cars{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+    padding:20px 40px 50px;
 }
 .card{
-    background:white;
-    border-radius:10px;
-    box-shadow:0 0 10px #ddd;
-    text-align:center;
-    padding:15px;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
 }
-.car-img{
+.card:hover{
+    transform:translateY(-8px);
+}
+.card img{
     width:100%;
-    border-radius:8px;
+    height:180px;
+    object-fit:cover;
+}
+.card-content{
+    padding:15px;
+    text-align:center;
 }
 .price{
-    font-size:20px;
     color:#e63946;
+    font-size:22px;
     font-weight:bold;
+    margin:10px 0;
 }
 .btn{
     display:inline-block;
     background:#25D366;
     color:white;
     padding:10px 20px;
-    border-radius:5px;
     text-decoration:none;
-    margin-top:10px;
+    border-radius:6px;
 }
+
 footer{
-    background:#0d1b2a;
+    background:#0b1d33;
     color:white;
     text-align:center;
-    padding:15px;
+    padding:20px;
+    margin-top:20px;
 }
 </style>
 </head>
@@ -67,48 +103,58 @@ footer{
 <body>
 
 <header>
-<h1>Ahmedabad Car Rental</h1>
-<p>Taxi Service in Ahmedabad | Mo: 9510375166</p>
+  <h2>Ahmedabad Car Rental</h2>
+  <a href="https://wa.me/919510375166">Book Now</a>
 </header>
 
 <div class="hero">
-Best Taxi Service in Ahmedabad
+  <h1>Best Taxi Service in Ahmedabad</h1>
 </div>
 
-<div class="container">
+<h2 class="section-title">Our Vehicles</h2>
 
-<div class="card">
-<img src="images/swift.jpg" class="car-img">
-<h3>Swift Dzire</h3>
-<p class="price">₹11 / KM</p>
-<a class="btn" href="https://wa.me/919510375166?text=I want to book Swift Dzire">Book Now</a>
-</div>
+<div class="cars">
 
-<div class="card">
-<img src="images/ertiga.jpg" class="car-img">
-<h3>Ertiga</h3>
-<p class="price">₹14 / KM</p>
-<a class="btn" href="https://wa.me/919510375166?text=I want to book Ertiga">Book Now</a>
-</div>
+  <div class="card">
+    <img src="images/swift.jpg">
+    <div class="card-content">
+      <h3>Swift Dzire</h3>
+      <p class="price">₹11 / KM</p>
+      <a class="btn" href="https://wa.me/919510375166?text=I want to book Swift Dzire">Book Now</a>
+    </div>
+  </div>
 
-<div class="card">
-<img src="images/innova.jpg" class="car-img">
-<h3>Innova Crysta</h3>
-<p class="price">₹19 / KM</p>
-<a class="btn" href="https://wa.me/919510375166?text=I want to book Innova Crysta">Book Now</a>
-</div>
+  <div class="card">
+    <img src="images/ertiga.jpg">
+    <div class="card-content">
+      <h3>Ertiga</h3>
+      <p class="price">₹14 / KM</p>
+      <a class="btn" href="https://wa.me/919510375166?text=I want to book Ertiga">Book Now</a>
+    </div>
+  </div>
 
-<div class="card">
-<img src="images/urbania.jpg" class="car-img">
-<h3>Urbania</h3>
-<p class="price">₹32 / KM</p>
-<a class="btn" href="https://wa.me/919510375166?text=I want to book Urbania">Book Now</a>
-</div>
+  <div class="card">
+    <img src="images/innova.jpg">
+    <div class="card-content">
+      <h3>Innova Crysta</h3>
+      <p class="price">₹19 / KM</p>
+      <a class="btn" href="https://wa.me/919510375166?text=I want to book Innova Crysta">Book Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="images/urbania.jpg">
+    <div class="card-content">
+      <h3>Urbania</h3>
+      <p class="price">₹32 / KM</p>
+      <a class="btn" href="https://wa.me/919510375166?text=I want to book Urbania">Book Now</a>
+    </div>
+  </div>
 
 </div>
 
 <footer>
-© Ahmedabad Car Rental
+  📞 9510375166 | Ahmedabad Car Rental
 </footer>
 
 </body>
