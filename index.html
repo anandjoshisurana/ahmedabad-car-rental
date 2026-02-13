@@ -6,224 +6,272 @@
 <title>Ahmedabad Car Rental</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
-body{background:#f5f7fa;color:#222;scroll-behavior:smooth;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f2f2f2;color:#222;scroll-behavior:smooth}
 
-header{
-  background:#0b1d33;
-  padding:15px 40px;
+/* TOP BAR */
+.topbar{
+  background:#111;
+  color:#fff;
+  padding:8px 40px;
   display:flex;
   justify-content:space-between;
-  align-items:center;
-  position:sticky;
-  top:0;
-  z-index:1000;
-}
-.logo{color:#fff;font-size:24px;font-weight:bold;}
-nav a{
-  color:white;
-  text-decoration:none;
-  margin:0 10px;
   font-size:14px;
 }
-nav a:hover{color:#25D366;}
 
+/* HERO */
 .hero{
-  height:450px;
-  background:url('https://images.unsplash.com/photo-1493238792000-8113da705763') center/cover;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:white;
-  text-align:center;
+  background:url('https://images.unsplash.com/photo-1511919884226-fd3cad34687c') center/cover;
+  height:90vh;
+  position:relative;
 }
-.hero h1{
+.overlay{
+  position:absolute;inset:0;
+  background:rgba(0,0,0,0.6);
+}
+.logo{
+  position:absolute;
+  top:15px;left:50%;
+  transform:translateX(-50%);
+  color:#fff;
+  font-size:28px;
+  font-weight:bold;
+  z-index:2;
+}
+
+/* MENU */
+nav{
+  position:absolute;
+  top:90px;
+  left:50%;
+  transform:translateX(-50%);
+  background:linear-gradient(90deg,#d4d500,#ff7f3f);
+  padding:15px 30px;
+  border-radius:40px;
+  z-index:3;
+}
+nav a{
+  text-decoration:none;
+  color:#fff;
+  margin:0 12px;
+  font-size:14px;
+  font-weight:bold;
+}
+
+/* HERO TEXT */
+.hero-content{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  color:#fff;
+  z-index:2;
+}
+.hero-content h1{font-size:52px;margin-bottom:15px}
+.hero-content p{max-width:700px;line-height:1.6}
+.btn{
+  display:inline-block;
+  margin:15px 8px;
+  padding:12px 28px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
+.btn-yellow{background:linear-gradient(90deg,#d4d500,#ff7f3f);color:#000}
+.btn-white{background:#fff;color:#000}
+
+/* SECTION TITLE */
+h2{
+  text-align:center;
   font-size:48px;
-  background:rgba(0,0,0,0.5);
-  padding:20px 30px;
+  margin:60px 0 30px;
+}
+
+/* VEHICLE CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  padding:0 40px 60px;
+}
+.card{
+  background:linear-gradient(90deg,#d4d500,#ff7f3f);
   border-radius:10px;
-}
-
-section{padding:60px 40px;}
-h2{text-align:center;margin-bottom:25px;font-size:32px;color:#0b1d33;}
-
-.intro,.about,.contact{
-  max-width:900px;
-  margin:auto;
   text-align:center;
-  line-height:1.7;
+  padding:15px;
+}
+.card img{width:100%;height:150px;object-fit:contain}
+.price{
+  font-size:35px;
+  font-weight:bold;
+  margin:15px 0;
+}
+.book{
+  background:#000;
+  color:#fff;
+  padding:12px 25px;
+  border-radius:30px;
+  display:inline-block;
+  text-decoration:none;
 }
 
-.cars{
+/* SERVICES DARK */
+.services{
+  background:#0b0b0b;
+  color:white;
+  padding:70px 40px;
+}
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+.service{
+  text-align:center;
+}
+.service h3{margin:15px 0}
+
+/* FOOTER */
+footer{
+  background:#000;
+  color:#fff;
+  padding:40px;
+}
+.footer-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:20px;
 }
-.card{
-  background:white;
-  border-radius:10px;
-  overflow:hidden;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-  transition:0.3s;
-}
-.card:hover{transform:translateY(-8px);}
-.card img{width:100%;height:180px;object-fit:cover;}
-.card-content{padding:15px;text-align:center;}
-.price{font-size:22px;color:#e63946;font-weight:bold;margin:8px 0;}
-.btn{
-  display:inline-block;
+footer a{color:#fff;text-decoration:none;display:block;margin:6px 0}
+
+/* FLOAT BUTTONS */
+.whatsapp{
+  position:fixed;
+  bottom:20px;left:20px;
   background:#25D366;
   color:white;
-  padding:10px 20px;
-  border-radius:6px;
+  padding:12px 14px;
+  border-radius:50%;
   text-decoration:none;
+  font-size:22px;
 }
-
-.inquiry-box{
-  max-width:600px;
-  margin:auto;
-  background:white;
-  padding:25px;
-  border-radius:10px;
-  box-shadow:0 0 10px #ddd;
-}
-input,textarea{
-  width:100%;
-  padding:10px;
-  margin:10px 0;
-  border:1px solid #ccc;
-  border-radius:6px;
-}
-button{
-  background:#25D366;
+.callbtn{
+  position:fixed;
+  right:0;
+  top:50%;
+  background:#ffa500;
   color:white;
-  padding:10px 20px;
-  border:none;
-  border-radius:6px;
-  cursor:pointer;
-}
-
-footer{
-  background:#0b1d33;
-  color:white;
-  text-align:center;
-  padding:20px;
+  padding:15px 10px;
+  writing-mode:vertical-rl;
+  text-decoration:none;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">Ahmedabad Car Rental</div>
-  <nav>
+<div class="topbar">
+  <div>📞 9510375166</div>
+  <div>Ahmedabad Car Rental</div>
+</div>
+
+<section class="hero" id="home">
+<div class="overlay"></div>
+
+<div class="logo">Ahmedabad Car Rental</div>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#intro">Introduction</a>
+  <a href="#about">About Us</a>
+  <a href="#oneway">One Way Cab</a>
+  <a href="#roundtrip">Round Trip Cab</a>
+  <a href="#contact">Inquiry</a>
+  <a href="#contact">Contact Us</a>
+</nav>
+
+<div class="hero-content">
+  <h1>Welcome to Ahmedabad Car Rental</h1>
+  <p>Professional taxi service for One Way, Round Trip and Airport Transfers with well-maintained cars and expert drivers.</p>
+  <a class="btn btn-yellow" href="https://wa.me/919510375166">Inquiry Now</a>
+  <a class="btn btn-white" href="tel:9510375166">Call Now</a>
+</div>
+</section>
+
+<h2 id="roundtrip">Round Trip Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="images/swift.jpg">
+<h3>Swift Dzire</h3>
+<div class="price">Rs. 11/KM</div>
+<a class="book" href="https://wa.me/919510375166?text=Book Swift Dzire">BOOK NOW</a>
+</div>
+
+<div class="card">
+<img src="images/ertiga.jpg">
+<h3>Ertiga</h3>
+<div class="price">Rs. 14/KM</div>
+<a class="book" href="https://wa.me/919510375166?text=Book Ertiga">BOOK NOW</a>
+</div>
+
+<div class="card">
+<img src="images/innova.jpg">
+<h3>Innova Crysta</h3>
+<div class="price">Rs. 19/KM</div>
+<a class="book" href="https://wa.me/919510375166?text=Book Innova">BOOK NOW</a>
+</div>
+
+<div class="card">
+<img src="images/urbania.jpg">
+<h3>Urbania</h3>
+<div class="price">Rs. 32/KM</div>
+<a class="book" href="https://wa.me/919510375166?text=Book Urbania">BOOK NOW</a>
+</div>
+
+</div>
+
+<section class="services">
+<h2 style="color:white">Our Services</h2>
+<div class="service-grid">
+  <div class="service">
+    <h3>Outstation One Way</h3>
+    <p>Affordable one-way taxi service anytime.</p>
+  </div>
+  <div class="service">
+    <h3>Outstation Round Trip</h3>
+    <p>Comfortable long journey with best rates.</p>
+  </div>
+  <div class="service">
+    <h3>Airport Transfer</h3>
+    <p>24×7 pickup and drop service available.</p>
+  </div>
+</div>
+</section>
+
+<footer id="contact">
+<div class="footer-grid">
+  <div>
+    <h3>Ahmedabad Car Rental</h3>
+    <p>Taxi Service in Ahmedabad</p>
+  </div>
+  <div>
+    <h3>Quick Links</h3>
     <a href="#home">Home</a>
-    <a href="#introduction">Introduction</a>
     <a href="#about">About Us</a>
-    <a href="#oneway">One Way Cab</a>
-    <a href="#roundtrip">Round Trip Cab</a>
-    <a href="#inquiry">Inquiry</a>
-    <a href="#contact">Contact Us</a>
-  </nav>
-</header>
-
-<!-- HOME -->
-<section id="home" class="hero">
-  <h1>Best Taxi Service in Ahmedabad</h1>
-</section>
-
-<!-- INTRODUCTION -->
-<section id="introduction">
-  <h2>Introduction</h2>
-  <div class="intro">
-    Welcome to Ahmedabad Car Rental. We provide safe, comfortable and affordable taxi services for local travel, outstation trips and airport transfers.
+    <a href="#roundtrip">Round Trip</a>
   </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <h2>About Us</h2>
-  <div class="about">
-    Ahmedabad Car Rental offers professional drivers and well-maintained vehicles for your travel needs. Customer satisfaction and safety are our top priorities.
+  <div>
+    <h3>Contact Us</h3>
+    <p>📞 9510375166</p>
   </div>
-</section>
-
-<!-- ONE WAY CAB -->
-<section id="oneway">
-  <h2>One Way Cab</h2>
-  <div class="cars">
-
-    <div class="card">
-      <img src="images/swift.jpg">
-      <div class="card-content">
-        <h3>Swift Dzire</h3>
-        <p class="price">₹11 / KM</p>
-        <a class="btn" href="https://wa.me/919510375166?text=I want One Way Swift Dzire">Book Now</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/ertiga.jpg">
-      <div class="card-content">
-        <h3>Ertiga</h3>
-        <p class="price">₹14 / KM</p>
-        <a class="btn" href="https://wa.me/919510375166?text=I want One Way Ertiga">Book Now</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ROUND TRIP -->
-<section id="roundtrip">
-  <h2>Round Trip Cab</h2>
-  <div class="cars">
-
-    <div class="card">
-      <img src="images/innova.jpg">
-      <div class="card-content">
-        <h3>Innova Crysta</h3>
-        <p class="price">₹19 / KM</p>
-        <a class="btn" href="https://wa.me/919510375166?text=I want Round Trip Innova">Book Now</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/urbania.jpg">
-      <div class="card-content">
-        <h3>Urbania</h3>
-        <p class="price">₹32 / KM</p>
-        <a class="btn" href="https://wa.me/919510375166?text=I want Round Trip Urbania">Book Now</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- INQUIRY -->
-<section id="inquiry">
-  <h2>Inquiry</h2>
-  <div class="inquiry-box">
-    <input type="text" placeholder="Your Name">
-    <input type="text" placeholder="Mobile Number">
-    <textarea placeholder="Your Message"></textarea>
-    <button onclick="window.location.href='https://wa.me/919510375166'">Send Inquiry</button>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact Us</h2>
-  <div class="contact">
-    📞 9510375166<br>
-    Ahmedabad Car Rental<br>
-    Taxi Service in Ahmedabad
-  </div>
-</section>
-
-<footer>
-© Ahmedabad Car Rental
+</div>
 </footer>
+
+<a class="whatsapp" href="https://wa.me/919510375166">💬</a>
+<a class="callbtn" href="tel:9510375166">Call Now</a>
 
 </body>
 </html>
