@@ -4,55 +4,112 @@
 <title>Ahmedabad Car Rental</title>
 <style>
 body{
-  font-family: Arial;
-  text-align:center;
-  background:#f5f5f5;
+    margin:0;
+    font-family:Arial;
+    background:#f5f5f5;
 }
-.car{
-  background:white;
-  margin:20px;
-  padding:20px;
-  border-radius:10px;
-  box-shadow:0 0 10px #ddd;
+header{
+    background:#0d1b2a;
+    color:white;
+    padding:20px;
+    text-align:center;
 }
-a{
-  background:#25D366;
-  color:white;
-  padding:10px 20px;
-  text-decoration:none;
-  border-radius:5px;
+.hero{
+    background:url('https://images.unsplash.com/photo-1549924231-f129b911e442') center/cover;
+    height:350px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:32px;
+    font-weight:bold;
+}
+.container{
+    padding:30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+.card{
+    background:white;
+    border-radius:10px;
+    box-shadow:0 0 10px #ddd;
+    text-align:center;
+    padding:15px;
+}
+.car-img{
+    width:100%;
+    border-radius:8px;
+}
+.price{
+    font-size:20px;
+    color:#e63946;
+    font-weight:bold;
+}
+.btn{
+    display:inline-block;
+    background:#25D366;
+    color:white;
+    padding:10px 20px;
+    border-radius:5px;
+    text-decoration:none;
+    margin-top:10px;
+}
+footer{
+    background:#0d1b2a;
+    color:white;
+    text-align:center;
+    padding:15px;
 }
 </style>
 </head>
+
 <body>
 
+<header>
 <h1>Ahmedabad Car Rental</h1>
-<p>Taxi Service in Ahmedabad</p>
-<p>Mo: 9510375166</p>
+<p>Taxi Service in Ahmedabad | Mo: 9510375166</p>
+</header>
 
-<div class="car">
-  <h2>Swift Dzire</h2>
-  <p>₹11 / KM</p>
-  <a href="https://wa.me/919510375166?text=I want to book Swift Dzire">Book Now</a>
+<div class="hero">
+Best Taxi Service in Ahmedabad
 </div>
 
-<div class="car">
-  <h2>Ertiga</h2>
-  <p>₹14 / KM</p>
-  <a href="https://wa.me/919510375166?text=I want to book Ertiga">Book Now</a>
+<div class="container">
+
+<div class="card">
+<img src="images/swift.jpg" class="car-img">
+<h3>Swift Dzire</h3>
+<p class="price">₹11 / KM</p>
+<a class="btn" href="https://wa.me/919510375166?text=I want to book Swift Dzire">Book Now</a>
 </div>
 
-<div class="car">
-  <h2>Innova Crysta</h2>
-  <p>₹19 / KM</p>
-  <a href="https://wa.me/919510375166?text=I want to book Innova Crysta">Book Now</a>
+<div class="card">
+<img src="images/ertiga.jpg" class="car-img">
+<h3>Ertiga</h3>
+<p class="price">₹14 / KM</p>
+<a class="btn" href="https://wa.me/919510375166?text=I want to book Ertiga">Book Now</a>
 </div>
 
-<div class="car">
-  <h2>Urbania</h2>
-  <p>₹32 / KM</p>
-  <a href="https://wa.me/919510375166?text=I want to book Urbania">Book Now</a>
+<div class="card">
+<img src="images/innova.jpg" class="car-img">
+<h3>Innova Crysta</h3>
+<p class="price">₹19 / KM</p>
+<a class="btn" href="https://wa.me/919510375166?text=I want to book Innova Crysta">Book Now</a>
 </div>
+
+<div class="card">
+<img src="images/urbania.jpg" class="car-img">
+<h3>Urbania</h3>
+<p class="price">₹32 / KM</p>
+<a class="btn" href="https://wa.me/919510375166?text=I want to book Urbania">Book Now</a>
+</div>
+
+</div>
+
+<footer>
+© Ahmedabad Car Rental
+</footer>
 
 </body>
 </html>
